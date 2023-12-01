@@ -1,0 +1,630 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{eumat}
+
+\begin{document}
+\begin{eulernotebook}
+\begin{eulercomment}
+Nama :Ghefira Nur Annisa\\
+NIM  :22305144034\\
+Kelas: Matematika E 2022
+
+\begin{eulercomment}
+\eulerheading{2. LIMIT FUNGSI}
+\begin{eulercomment}
+Materi mencakup di antaranya:\\
+1. Mendefinisikan Limit Fungsi pada EMT\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   1.1 Definisi LIMIT KIRI
+   1.2 Definisi LIMIT KANAN
+\end{eulerttcomment}
+\begin{eulercomment}
+2. LIMIT FUNGSI ALJABAR\\
+3. LIMIT FUNGSI NON ALJABAR (transenden)\\
+\end{eulercomment}
+\begin{eulerttcomment}
+   3.1 Limit Fungsi Trigonometri
+   3.2 Limit Fungsi Eksponensial
+   4.3 Limit Fungsi Logaritma
+\end{eulerttcomment}
+\begin{eulercomment}
+
+
+\begin{eulercomment}
+\eulerheading{Definisi Limit}
+\begin{eulercomment}
+Dalam matematika, konsep limit digunakan untuk menjelaskan perilaku
+suatu fungsi saat peubah bebasnya mendekati suatu titik tertentu, atau
+menuju tak hingga; atau perilaku dari suatu barisan saat indeks
+mendekati tak hingga. Limit dipakai dalam kalkulus (dan cabang lainnya
+dari analisis matematika) untuk membangun pengertian kekontinuan,
+turunan dan integral.\\
+Dalam pelajaran matematika, limit biasanya mulai dipelajari saat
+pengenalan terhadap kalkulus.
+
+\begin{eulercomment}
+\eulerheading{Limit Fungsi}
+\begin{eulercomment}
+Jika f(x) adalah fungsi real dan c adalah bilangan real, maka:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim_{x \to c} f(x) = L
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Notasi tersebut menyatakan bahwa f(x) untuk niai x mendekati c sama
+dengan L. F(x) disini dapat berupa bermacam-macam jenis fungsi. Dan L
+dapat berupa konstanta, ataupun "und" (tak terdefinisi), "ind" (tak
+tentu namun terbatas), "infinity" (kompleks tak hingga). Begitupun
+dengan batas c, dapat berupa sebarang nilai atau pada tak hingga
+(-inf, minf, dan inf).
+
+Sebuah fungsi dapat dikatakan memiliki limit apabila limit kanan dan
+limit kiri nya memiliki nilai yang sama. Dimana, limit dari fungsi
+tersebut adalah nilai dari limit kanan dan limit kiri fungsi yang
+bernilai sama tadi.
+\end{eulercomment}
+\begin{eulerprompt}
+>                                                   
+\end{eulerprompt}
+\begin{eulerudf}
+     
+\end{eulerudf}
+\begin{eulerprompt}
+>     
+\end{eulerprompt}
+\eulerheading{Limit Kiri dan Kanan}
+\begin{eulercomment}
+Pengertian limit kiri dan limit kanan berkaitan dengan pendekatan
+nilai sebuah fungsi saat variabel inputnya mendekati suatu nilai
+tertentu dari sisi kiri atau kanan titik tersebut.
+
+
+Limit kiri didefinisikan sebagai nilai yang didekati oleh fungsi saat
+variabel inputnya mendekati suatu nilai tertentu dari nilai yang lebih
+kecil atau dari sisi kiri.\\
+Limit kiri ditulis sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to c^-} {f(x)} = L
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini berarti bahwa saat x mendekati c dari sisi kiri, nilai dari fungsi
+f(x) mendekati nilai L.
+
+
+Sebaliknya, limit kanan didefinisikan sebagai nilai yang didekati oleh
+fungsi saat variabel inputnya mendekati suatu nilai tertentu dari
+nilai yang lebih besar atau dari sisi kanan.\\
+Limit kanan ditulis sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to c^+} {f(x)} = L
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini berarti bahwa saat x mendekati c dari sisi kanan, nilai dari
+fungsi f(x) mendekati nilai L.\\
+Dalam banyak kasus, untuk limit fungsi yang ada, nilai limit kiri dan
+limit kanan mungkin berbeda.
+\end{eulercomment}
+\begin{eulerprompt}
+>                        
+\end{eulerprompt}
+\begin{eulerudf}
+   
+\end{eulerudf}
+\begin{eulerprompt}
+>    
+\end{eulerprompt}
+\begin{eulerudf}
+   
+\end{eulerudf}
+\begin{eulerprompt}
+> 
+\end{eulerprompt}
+\eulerheading{Limit pada EMT}
+\begin{eulercomment}
+Pada EMT cara mendefinisikan limit yaitu dengan format :
+
+\textdollar{}showev('limit(f(x),x,c))
+
+Format tersebut akan menampilkan limit yang dimaksud dan hasilnya.
+Jika kita ingin menampilkan hasilnya saja dari sebuah limit tanpa
+menampilkan limitnya, kita bisa menggunakan format :
+
+'limit(f(x),x,c)
+
+Sedangkan, untuk limit kanan dan limit kiri seperti pada definisi
+dapat ditampilkan di EMT dengan cara menambah opsi "plus" atau "minus"
+:
+
+\textdollar{}showev('limit(f(x),x,c, plus)) atau 'limit(f(x),x,c, minus)
+
+Limit dapat divisualisasikan menggunakan plot 2 dimensi. Pada EMT
+sendiri, format yang bisa digunakan untuk memvisualisasikan limit
+adalah :
+
+plot2d("f(x)",-c,c):
+
+aspect(1.5); plot2d("f(x)",c); plot2d(x,c\textgreater{}points,style="ow",\textgreater{}add):
+
+Dengan f(x) adalah fungsi pada limit yang dicari, dan c berupa
+bilangan real menyesuaikan batas dari limit itu sendiri.
+\end{eulercomment}
+\begin{eulerprompt}
+>               
+\end{eulerprompt}
+\eulerheading{Limit Fungsi Aljabar}
+\begin{eulercomment}
+Limit fungsi aljabar adalah nilai yang didekati oleh sebuah fungsi
+saat variabel inputnya mendekati suatu nilai tertentu.\\
+Secara matematis, kita dapat menyatakan limit fungsi aljabar sebagai
+berikut:\\
+Diberikan fungsi f(x), dengan x mendekati suatu nilai c, maka limit
+fungsi f(x) saat x mendekati c dapat ditulis sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim_{x \to c} f(x) = L
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Di mana L adalah nilai yang didekati oleh fungsi f(x) saat x mendekati
+c. Limit fungsi ini menggambarkan perilaku fungsi pada titik c dan
+dapat membantu kita mengidentifikasi apakah suatu fungsi memiliki
+nilai tertentu pada suatu titik atau apakah ada asimtot vertikal atau
+horizontal pada grafik fungsi tersebut.
+\end{eulercomment}
+\begin{eulerprompt}
+>$showev('limit((x^3-13*x^2+51*x-63)/(x^3-4*x^2-3*x+18),x,3))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 3}{\frac{x^3-13\,x^2+51\,x-63}{x^3-4\,x^2-3\,x+
+ 18}}=-\frac{4}{5}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+penyelesaian :\\
+dari persamaan polinomial diatas dapat kita masukkan limitnya yakni
+x=3 kedalam persamaan tersebut, sehingga didapatkan :
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to 3} \frac{(x^3-13x^2+51x-63)}{(x^3-4x^2-3x+18)}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to 3} \frac{(3^3-13(3)^2+51(3)-63)}{(3^3-4(3)^2-3(3)+18)}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to 3} \frac{(27-117+153-63)}{(27-36-9+18)}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to 3} \frac{(0)}{0} = \infty
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Maka, untuk mencari limitnya dapat dicari faktor dari persamaan
+polinomial tersebut terlebih dahul, sehingga:
+\end{eulercomment}
+\begin{eulerprompt}
+>$& factor((x^3-13*x^2+51*x-63)/(x^3-4*x^2-3*x+18))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\frac{x-7}{x+2}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+sehingga dari faktor diatas, dapat dicari limitnya yakni:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to 3} \frac{x-7}{x+2} = \lim \limits_{x \to 3} \frac{3-7}{3+2} = \frac{-4}{5}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+MAKA DAOAT DIBUKTIKAN BAHWA NILAI LIMIT TERSEBUT BERNILAI BENAR
+\end{eulercomment}
+\begin{eulerprompt}
+>aspect(1.5); plot2d("(x^3-13*x^2+51*x-63)/(x^3-4*x^2-3*x+18)",0,4); plot2d(3,-4/5,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-003.png}
+\begin{eulerprompt}
+>$showev('limit((x^2-9)/(2*x^2-5*x-3),x,3))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 3}{\frac{x^2-9}{2\,x^2-5\,x-3}}=\frac{6}{7}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>aspect(1.5); plot2d("(x^2-9)/(2*x^2-5*x-3)",0,4); plot2d(3,6/7,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-005.png}
+\begin{eulerprompt}
+>$showev('limit((x^2-3*x-10)/(x-5),x,5))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 5}{\frac{x^2-3\,x-10}{x-5}}=7
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>aspect(1.5); plot2d("(x^2-3*x-10)/(x-5)",0,6); plot2d(5,7,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-007.png}
+\begin{eulerprompt}
+>$showev('limit(((2*x^2-2*x+5)/(3*x^2+x-6)),x,3))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 3}{\frac{2\,x^2-2\,x+5}{3\,x^2+x-6}}=\frac{17}{
+ 24}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>aspect(1.5); plot2d("(2*x^2-2*x+5)/(3*x^2+x-6)",0,4); plot2d(3,17/24,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-009.png}
+\begin{eulerprompt}
+>$showev('limit((3*x-6)/(x+2),x,2))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 2}{\frac{3\,x-6}{x+2}}=0
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>aspect(1.5); plot2d("(3*x-6)/(x+2)",0,3); plot2d(2,0,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-011.png}
+\begin{eulerprompt}
+>            
+\end{eulerprompt}
+\begin{eulercomment}
+latex:
+
+\begin{eulercomment}
+\eulerheading{Limit Fungsi Non Aljabar}
+\begin{eulercomment}
+\begin{eulercomment}
+\eulerheading{1. Limit Fungsi Trigonometri}
+\begin{eulercomment}
+Limit fungsi trigonometri adalah nilai yang didekati oleh sebuah
+fungsi trigonometri saat variabel inputnya mendekati suatu nilai
+tertentu. Fungsi trigonometri melibatkan fungsi sinus, kosinus,
+tangen, kotangen, dan sebagainya. Pada umumnya, limit fungsi
+trigonometri dihitung dengan menggunakan pendekatan geometri yang
+melibatkan lingkaran unit.\\
+Misalnya, untuk fungsi sinus, kita dapat menyatakan limit fungsi sinus
+saat x mendekati suatu nilai tertentu c sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim_{x \to c} sin(x) = sin(c)
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini berarti bahwa saat x mendekati c, nilai sinus dari x akan
+mendekati sinus dari c.
+\end{eulercomment}
+\begin{eulerprompt}
+>$showev('limit(2*x*sin(x)/(1-cos(x)),x,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+2\,\left(\lim_{x\rightarrow 0}{\frac{x\,\sin x}{1-\cos x}}\right)=4
+\]
+\end{eulerformula}
+\begin{eulercomment}
+PENYELESAIAN :\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{xsinx}{1-cosx} )
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{0sin(0)}{1-cos(0)} )
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{0}{1-1} ) = \infty
+\]
+\end{eulerformula}
+\begin{eulercomment}
+MAKA kita perlu mengubah persamaan trigonometri diatas dengan
+menggunakan aturan L HOSTIPAL menjadi :\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{xsin(x)}{1-cosx} )
+\]
+\end{eulerformula}
+\begin{eulercomment}
+dideferensialkan (diturunkan)\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{sinx + xcosx}{sinx} )
+\]
+\end{eulerformula}
+\begin{eulercomment}
+berdasarkan aturan L HOSPITAL persamaan trigonometri tersebut masih
+menghasilkan latex: \textbackslash{}infty  \\
+sehingga dapat kita turunkan lagi (dideferensialkan) menjadi:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{2cosx - xsinx}{cosx} )
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{2cos(0) - (0)sin(0)}{cos(0)} ) 
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+2( \lim \limits_{x \to 0} \frac{2 - 0}{1} = 2 \times 2 = 4
+\]
+\end{eulerformula}
+\begin{eulercomment}
+JADI TERBUKTI BAHWA PERSAMAAN TRIGONOMETRI dari EMT TERSEBUT TERBUKTI
+TERBUKTI BENAR
+\end{eulercomment}
+\begin{eulerprompt}
+>plot2d("2*x*sin(x)/(1-cos(x))",-pi,pi); plot2d(0,4,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-013.png}
+\begin{eulerprompt}
+>$showev('limit(cot(7*h)/cot(5*h),h,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{h\rightarrow 0}{\frac{\cot \left(7\,h\right)}{\cot \left(5\,h
+ \right)}}=\frac{5}{7}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("cot(7*x)/cot(5*x)",-0.001,0.001); plot2d(0,5/7,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-015.png}
+\begin{eulerprompt}
+> $showev('limit(sin(x)/x,x,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 0}{\frac{\sin x}{x}}=1
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("sin(x)/x",-pi,pi); plot2d(0,1,>points,style="ow",>add):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-017.png}
+\begin{eulerprompt}
+>$showev('limit(cos(2*x)/(sin(x) - cos (x)),x,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 0}{\frac{\cos \left(2\,x\right)}{\sin x-\cos x}}=
+ -1
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("cos(2*x)/(sin(x) - cos (x))",-1,1):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-019.png}
+\begin{eulerprompt}
+>$showev('limit((3*x*tan(x))/(1-cos(4*x)),x,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+3\,\left(\lim_{x\rightarrow 0}{\frac{x\,\tan x}{1-\cos \left(4\,x
+ \right)}}\right)=\frac{3}{8}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("(3*x*tan(x))/(1-cos(4*x))",-pi/2,2pi,0,2pi):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-021.png}
+\eulerheading{2. Limit Fungsi Eksponensial}
+\begin{eulercomment}
+limit fungsi eksponensial adalah nilai yang didekati oleh sebuah
+fungsi eksponensial saat variabel inputnya mendekati suatu nilai
+tertentu. Fungsi eksponensial melibatkan bentuk fungsional seperti
+a\textasciicircum{}x, dengan a sebagai basis dan x sebagai eksponen.\\
+Misalnya, limit fungsi eksponensial saat x mendekati suatu nilai
+tertentu c dapat dinyatakan sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim_{x \to c} a^x = a^c
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini berarti bahwa saat x mendekati c, nilai dari fungsi eksponensial
+a\textasciicircum{}x akan mendekati nilai a\textasciicircum{}c.\\
+Limit fungsi trigonometri dan limit fungsi eksponensial memiliki
+beragam sifat dan properti yang dapat digunakan dalam analisis
+matematika. Mereka juga sering digunakan dalam pemodelan dan aplikasi
+ilmu pengetahuan yang melibatkan perubahan atau pertumbuhan yang
+berkaitan dengan sudut atau eksponensial.
+
+\end{eulercomment}
+\begin{eulerprompt}
+>$showev('limit((1+2/(3*x))^(5*x),x,inf))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow \infty }{\left(\frac{2}{3\,x}+1\right)^{5\,x}}=e
+ ^{\frac{10}{3}}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Penyelesaian limit fungsi eksponensial tersebut:\\
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim \limits_{x \to \infty} \left(1+ \frac{2}{3x} \right)^{5x} = \lim \limits_{x \to \infty} \left(1+ \frac{2}{3x} \right)^{5x \cdot \frac{3}{3}}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+= \lim \limits_{x \to \infty} \left(1+ \frac{2}{3x} \right)^{3x \cdot \frac{5}{3}} = \left [\lim \limits_{x \to \infty} \left(1+ \frac{2}{3x} \right)^{3x} \right]^{\frac{5}{3}}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+= \left [\lim \limits_{3x \to \infty} \left(1+ \frac{2}{3x} \right)^{3x} \right]^{\frac{5}{3}} = \left [\lim \limits_{y \to \infty} \left(1+ \frac{2}{y} \right)^{y} \right]^{\frac{5}{3}}
+\]
+\end{eulerformula}
+\begin{eulerformula}
+\[
+(e^2)^{\frac{5}{3}} = e^{\frac{10}{3}}
+\]
+\end{eulerformula}
+\begin{eulercomment}
+JADI TERBUKTI PENYELESAIAN LIMIT FUNGSI EKSPONENSIAL TERSEBUT
+\end{eulercomment}
+\begin{eulerprompt}
+>plot2d("(1+2/(3*x))^(5*x)",-50,0,20,100):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-023.png}
+\begin{eulerprompt}
+>$showev('limit((1+1/x)^x,x,inf))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow \infty }{\left(\frac{1}{x}+1\right)^{x}}=e
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("(1+1/x)^x",-5,0,-1,50):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-025.png}
+\begin{eulerprompt}
+>$showev('limit((2^(4*x)+2^(6*x))^(1/x),x,inf))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow \infty }{\left(2^{6\,x}+2^{4\,x}\right)^{\frac{1
+ }{x}}}=64
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("(2^(4*x)+2^(6*x))^(1/x)",-1,20,50,100):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-027.png}
+\begin{eulerprompt}
+>                  
+\end{eulerprompt}
+\eulerheading{3. Limit Fungsi Logaritma}
+\begin{eulercomment}
+limit fungsi logaritma adalah nilai yang didekati oleh sebuah fungsi
+logaritma saat variabel inputnya mendekati suatu nilai tertentu.
+Fungsi logaritma melibatkan logaritma basis a dari x, yang ditulis
+sebagai log\_a(x).\\
+Misalnya, untuk fungsi logaritma alami (basis e), kita dapat
+menyatakan limit fungsi logaritma saat x mendekati suatu nilai
+tertentu c sebagai:
+
+\end{eulercomment}
+\begin{eulerformula}
+\[
+\lim_{x \to c} ln(x) = ln(c)
+\]
+\end{eulerformula}
+\begin{eulercomment}
+Ini berarti bahwa saat x mendekati c, nilai logaritma natural dari x
+akan mendekati logaritma natural dari c.\\
+i dan limit fungsi eksponensial memiliki beragam sifat dan properti
+yang dapat digunakan dalam analisis matematika. Mereka juga sering
+digunakan dalam pemodelan dan aplikasi ilmu pengetahuan yang
+melibatkan perubahan atau pertumbuhan yang berkaitan dengan sudut atau
+eksponensial.
+\end{eulercomment}
+\begin{eulerprompt}
+>$showev('limit(log(x), x, minf))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow  -\infty }{\log x}={\it infinity}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("log(x)",0,100):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-029.png}
+\begin{eulerprompt}
+>$showev('limit((log(2*x))^2,x,2))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 2}{\log ^2\left(2\,x\right)}=\log ^24
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("log(2*x)^2",0,10):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-031.png}
+\begin{eulerprompt}
+>$showev('limit(log(2*x), x, 0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 0}{\log \left(2\,x\right)}={\it infinity}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("log(2*x)",0,100):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-033.png}
+\begin{eulerprompt}
+>$showev('limit(log(10*x), x, 10))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 10}{\log \left(10\,x\right)}=\log 100
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("log(10*x)",2,10):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-035.png}
+\begin{eulerprompt}
+>$showev('limit(log(3*x),x,0))
+\end{eulerprompt}
+\begin{eulerformula}
+\[
+\lim_{x\rightarrow 0}{\log \left(3\,x\right)}={\it infinity}
+\]
+\end{eulerformula}
+\begin{eulerprompt}
+>plot2d("log(3*x)",-10,10):
+\end{eulerprompt}
+\eulerimg{17}{images/4. Ghefira Nur Annisa_22305144034 (Kalkulus)-037.png}
+\end{eulernotebook}
+\end{document}
